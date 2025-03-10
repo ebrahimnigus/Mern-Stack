@@ -1,12 +1,13 @@
 import React from "react";
-// import { forwardRef, Icon } from '@chakra-ui/react';
-import { Link } from "react-router-dom";
-// import { PlusSquareIcon } from "@chakra-ui/icons";
 import { Button, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import { CiSquarePlus } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { useColorMode } from "@/components/ui/color-mode";
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode} = useColorMode();
   return (
-    <Container maxW={"1140px"} px={4}>
+    <Container maxW={"1140px"} px={4} >
       <Flex 
         h={16} 
         alignItems={"center"} 
@@ -18,18 +19,21 @@ const Navbar = () => {
           fontWeight={"bold"} 
           textTransform={"uppercase"} 
           textAlign={"center"} 
-          bgGradient={"linear(to-r, cyan.400, blue.500)"} 
-          bgClip={"text"}
+          bgGradient="to-r" gradientFrom="cyan.400" gradientTo="blue.500"
+          bgClip="text"
         >
           <Link to={"/"}>Product Store 🛒</Link>
         </Text>
         
         <HStack spacing={2} alignItems={"center"}>
           <Link to={"/create"}>
-            <Button>
-              {/* <PlusSquareIcon fontSize={20} /> */}
+            <Button bg="#2d3748" _hover={{ bg:"#4a5568" }} _active={{ bg: "#1f2733"}}>
+              <CiSquarePlus fontSize={20} color="white"/>
             </Button>
           </Link>
+          <Button onClick={toggleColorMode}>
+            {colorMode === "light" ? "🌙" : "🌞"}
+          </Button>
         </HStack>
       </Flex>
     </Container>

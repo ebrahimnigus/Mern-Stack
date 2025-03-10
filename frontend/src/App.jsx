@@ -7,7 +7,7 @@ import Navbar from "./component/Navbar"
 
 function App() {
   return (
-    <Box minH={"100vh"}>
+    <Box minH={"100vh"} bg="#1a1f2b">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
