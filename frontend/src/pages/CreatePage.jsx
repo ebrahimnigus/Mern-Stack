@@ -4,17 +4,15 @@ import { Box, Button, Container, Heading, Input, VStack } from '@chakra-ui/react
 import React, { useState } from 'react'
 
 const CreatePage = () => {
-    const [newProduct, setNewProduct] = useState({ name: "", price: "", image: "" });
+  const [newProduct, setNewProduct] = useState({ name: "", price: "", image: "" });
+  const { createProduct } = useProductStore();
 
-
-  
-    const {createProduct} = useProductStore()
-    const handleAddProduct = async() => {
-      const {success, message} = await createProduct(newProduct);
-      console.log("Success:", success);
-      console.log("Message:", message);
-    
-    };
+  const handleAddProduct = async () => {
+    console.log("New Product:", newProduct);
+    const { success, message } = await createProduct(newProduct);
+    console.log("Success:", success);
+    console.log("Message:", message);
+  };
   
     // Any conditionally rendered content goes here
     return (
