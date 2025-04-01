@@ -27,6 +27,7 @@ const CreatePage = () => {
         isClosable: true
       })
     }
+    setNewProduct({ name:"", price:"", image:"" });
   };
 
     // Any conditionally rendered content goes here
