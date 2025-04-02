@@ -6,6 +6,7 @@ import Navbar from "./component/Navbar"
 import { useColorModeValue } from "./components/ui/color-mode"
 import { Toaster } from "@/components/ui/toaster"
 
+
 function App() {
 
   const bgColor = useColorModeValue("white", "#1a1f2b");
