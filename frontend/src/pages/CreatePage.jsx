@@ -33,12 +33,12 @@ const CreatePage = () => {
     // Any conditionally rendered content goes here
     return (
       <Container maxW="40rem">
-        <VStack spaceY="4">
+        <VStack gap="4">
           <Heading as="h1" size="5xl" fontWeight="bold" textAlign="center" mb="8">
             Create New Product
           </Heading>
           <Box w="full" bg={useColorModeValue("white", "gray.800")} p="6" rounded="lg" shadow="md">
-            <VStack spaceY="3">
+            <VStack gap="3">
               <Input
                 placeholder="Product Name"
                 name="name"
