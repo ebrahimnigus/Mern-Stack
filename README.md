@@ -10,3 +10,6 @@ A full-stack web application built using the MERN stack (MongoDB, Express.js, Re
 - **Mongoose** – MongoDB ORM
 - **Axios / Fetch** – HTTP requests
 
+Screenshot
+
+![Screenshot 2025-04-07 135906](https://github.com/user-attachments/assets/e145406c-8a22-41ef-a40f-17fe6bb292ca)
